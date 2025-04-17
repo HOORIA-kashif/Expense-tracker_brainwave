@@ -1,7 +1,7 @@
 let rowCount = 2;
 
 function dashboardPeWapas() {
-  window.location.href = "dashboard.html"; 
+  window.location.href = "dashboard.html";
 }
 
 function showSuccess() {
@@ -21,14 +21,33 @@ function addRow(btn) {
     }
   }
 
-  const tbody = document.querySelector("#formTable tbody"); 
+  const tbody = document.querySelector("#formTable tbody");
   const newRow = row.cloneNode(true);
 
-  newRow.querySelectorAll("input").forEach((input) => (input.value = ""));
-  newRow.querySelectorAll("select").forEach((select) => (select.value = ""));
-  newRow.querySelector("td").innerText = rowCount;
 
-  rowCount++;
+  newRow.querySelectorAll("input").forEach((input) => input.value = "");
+  newRow.querySelectorAll("select").forEach((select) => select.value = "");
+
+
+  newRow.querySelector("td").innerText = rowCount++;
+
+
+  const actionCell = newRow.querySelector("td:last-child");
+  actionCell.innerHTML = `
+    <button class="removeBtn" onclick="removeRow(this)">Remove</button>
+  `;
+
   tbody.appendChild(newRow);
   showSuccess();
+}
+
+function removeRow(btn) {
+  const row = btn.closest("tr");
+  const tbody = document.querySelector("#formTable tbody");
+
+  if (tbody.rows.length > 1) {
+    row.remove();
+  } else {
+    alert("At least one row must remain in the table.");
+  }
 }

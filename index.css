@@ -77,6 +77,16 @@ select, input {
   transition: 0.3s;
 }
 
+.removeBtn {
+  background-color: rgb(161, 31, 31);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 .addBtn:hover {
   background-color: #1e7e34;
 }
