@@ -25,8 +25,8 @@ function addRow(btn) {
   const newRow = row.cloneNode(true);
 
 
-  newRow.querySelectorAll("input").forEach((input) => input.value = "");
-  newRow.querySelectorAll("select").forEach((select) => select.value = "");
+  newRow.querySelectorAll("input").forEach(input => input.value = "");
+  newRow.querySelectorAll("select").forEach(select => select.value = "");
 
 
   newRow.querySelector("td").innerText = rowCount++;
@@ -34,6 +34,7 @@ function addRow(btn) {
 
   const actionCell = newRow.querySelector("td:last-child");
   actionCell.innerHTML = `
+    <button class="addBtn" onclick="addRow(this)">Add</button>
     <button class="removeBtn" onclick="removeRow(this)">Remove</button>
   `;
 
@@ -48,6 +49,6 @@ function removeRow(btn) {
   if (tbody.rows.length > 1) {
     row.remove();
   } else {
-    alert("At least one row must remain in the table.");
+    alert("At least one row must remain.");
   }
 }
