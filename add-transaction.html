@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Transaction</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="header">
+      <div class="greeting">
+        <p class="good-morning"> Add Transaction</p>
+        <h2>Enter your transaction</h2>
+      </div>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="User Profile" />
+      </div>
+    </header>
+
+
+<nav class="animated-navbar">
+  <ul>
+    <li class="nav-item"><a href="add-transaction.html" class="nav-link">Add Transactions</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link">My Expenses</a></li>
+   <li class="nav-item" ><a href="analytics.html" class="nav-link">Analytics</a></li>
+
+  </ul>
+</nav>
+    </header>
+
+
+    <section class="metrics">
+  <div class="circle-container">
+
+<div class="circle" data-value="75">
+  <svg>
+    <circle cx="50" cy="50" r="45" class="bg"></circle>
+    <circle class="progress balance-stroke" cx="50" cy="50" r="45"></circle>
+  </svg>
+  <div class="number">
+    <h4>$12K</h4>
+    <p>Balance</p>
+  </div>
+</div>
+
+<div class="circle" data-value="40">
+  <svg>
+    <circle cx="50" cy="50" r="45" class="bg"></circle>
+    <circle class="progress income-stroke" cx="50" cy="50" r="45"></circle>
+  </svg>
+  <div class="number">
+    <h4>$4.8K</h4>
+    <p>Income</p>
+  </div>
+</div>
+
+
+<div class="circle" data-value="60">
+  <svg>
+    <circle cx="50" cy="50" r="45" class="bg"></circle>
+    <circle class="progress expense-stroke" cx="50" cy="50" r="45"></circle>
+  </svg>
+  <div class="number">
+    <h4>$7.2K</h4>
+    <p>Expense</p>
+  </div>
+</div>
+
+
+   
+  </div>
+</section>
+
+   <section class="add-transaction">
+  <h3>Add Transaction</h3>
+  <form id="transactionForm">
+    <input
+      type="text"
+      id="description"
+      placeholder="Description (e.g., Grocery)"
+      required
+    />
+    <input
+      type="number"
+      id="amount"
+      placeholder="Amount"
+      step="0.01"
+      required
+    />
+   
+<div class="category-select" id="categorySelect">
+  <input type="hidden" id="category" name="category" required>
+  <div class="selected-category" id="selectedCategory">
+    <span class="cat-icon"><i class="fa-solid fa-utensils"></i></span>
+    <span class="cat-label">Food</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="category-options" id="categoryOptions">
+    <div class="category-option" data-value="Food">
+      <i class="fa-solid fa-utensils"></i> Food
+    </div>
+    <div class="category-option" data-value="Rent">
+      <i class="fa-solid fa-house"></i> Rent
+    </div>
+    <div class="category-option" data-value="Shopping">
+      <i class="fa-solid fa-bag-shopping"></i> Shopping
+    </div>
+    <div class="category-option" data-value="Salary">
+      <i class="fa-solid fa-money-bill-wave"></i> Salary
+    </div>
+    <div class="category-option" data-value="Transport">
+      <i class="fa-solid fa-truck"></i> Transport
+    </div>
+    <div class="category-option" data-value="Other">
+      <i class="fa-solid fa-ellipsis"></i> Other
+    </div>
+  </div>
+</div>
+    <button type="submit">Add</button>
+  </form>
+</section>
+  </div>
+
+  <script src="add-transaction.js"></script>
+</body>
+</html>

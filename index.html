@@ -2,88 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Supplier Entry Form</title>
-  <link rel="stylesheet" href="index.css">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+  <div class="dashboard-container">
+  
 
-<div class="top-bar">
-  <button class="dashboard-btn" onclick="goToDashboard()">
-    Back to Dashboard
-  </button>
-</div>
+    
 
-<h2>Supplier Entry Form</h2>
+    <header class="header">
+      <div class="greeting">
+        <p class="good-morning">👋 Good Morning</p>
+        <h2>Welcome, Alexa</h2>
+      </div>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="User Profile" />
+      </div>
+    </header>
 
-<div class="toast" id="toast">Row Added Successfully </div>
+ 
+<nav class="animated-navbar">
+  <ul>
+    <li class="nav-item"><a href="add-transaction.html" class="nav-link">Add Transactions</a></li>
+    <li class="nav-item"><a href="#recent-activity" class="nav-link">My Expenses</a></li>
+    <li class="nav-item"><a href="analytics.html" class="nav-link">Analytics</a></li>
+  </ul>
+</nav>
 
-<table id="formTable">
-  <thead>
-    <tr>
-      <th>S.No</th>
-      <th>Bill No</th>
-      <th>Supplier Name</th>
-      <th>Item</th>
-      <th>QTY/PACK</th>
-      <th>Country</th>
-      <th>City</th>
-      <th>Fright</th>
-      <th>Vehicle#</th>
-      <th>Date</th>
-      <th>Add</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td><input type="text" placeholder="Bill #"></td>
-      <td><input type="text" placeholder="Supplier"></td>
-      <td><input type="text" placeholder="Item"></td>
-      <td><input type="text" placeholder="Qty/Pack"></td>
-      <td>
-        <select>
-          <option value="">Select</option>
-          <option>Pakistan</option>
-          <option>UAE</option>
-          <option>China</option>
-        </select>
-      </td>
-      <td>
-        <select>
-          <option value="">Select</option>
-          <option>Lahore</option>
-          <option>Karachi</option>
-          <option>Islamabad</option>
-        </select>
-      </td>
-      <td>
-        <select>
-          <option value="">Select</option>
-          <option>Air</option>
-          <option>Sea</option>
-          <option>Road</option>
-        </select>
-      </td>
-      <td>
-        <select>
-          <option value="">Select</option>
-          <option>ABC-123</option>
-          <option>XYZ-999</option>
-        </select>
-      </td>
-      <td><input type="date" /></td>
-      <td>
-        <button class="addBtn" onclick="addRow(this)">Add</button>
-        <button class="removeBtn" onclick="removeRow(this)">Remove</button>
-      </td>
-      
-      
-    </tr>
-  </tbody>
-</table>
 
-<script src="script.js"></script>
+
+    <section class="balance-card">
+      <div class="balance-info">
+        <p>Available Credit</p>
+        <h1>$12,000</h1>
+        <div class="card-details">
+          <p>Card ending in •••• 0023</p>
+          <span>Valid Thru 08/25</span>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="analytics-section">
+      <div class="analytics-header">
+        <h3>Analytics</h3>
+        <span class="timeframe">Daily</span>
+      </div>
+      <canvas id="lineChart" ></canvas>
+    </section>
+
+
+
+
+
+  
+    <section class="recent-activity">
+      <div class="section-title">
+        <h3>Recent Activity</h3>
+        <a href="#">View All</a>
+      </div>
+      <div id="activity-list"></div>
+    </section>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=400, initial-scale=1.0" />
+  <title>Expense Analytics</title>
+  <link rel="stylesheet" href="index.css" />
+  
+</head>
+<body>
+    <nav class="animated-navbar">
+  <ul>
+    <li class="nav-item"><a href="add-transaction.html" class="nav-link">Add Transactions</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link">My Expenses</a></li>
+   <li class="nav-item" ><a href="analytics.html" class="nav-link">Analytics</a></li>
+
+  </ul>
+</nav>
+  <div class="analytics-container">
+    
+    <div class="analytics-title">Analytics</div>
+    <div class="analytics-desc">category-wise expense breakdown</div>
+    <canvas id="categoryPieChart" width="260" height="260"></canvas>
+    <div class="chart-legend" id="chartLegend"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="analytics.js"></script>
+</body>
+</html>
