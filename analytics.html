@@ -8,7 +8,19 @@
   
 </head>
 <body>
-    <nav class="animated-navbar">
+   <div class="dashboard-container">
+    <header class="header">
+      <div class="greeting">
+        <p class="good-morning"> Analytics</p>
+        <h2>Expense Analytics</h2>
+      </div>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="User Profile" />
+      </div>
+    </header>
+
+
+<nav class="animated-navbar">
   <ul>
     <li class="nav-item"><a href="add-transaction.html" class="nav-link">Add Transactions</a></li>
     <li class="nav-item"><a href="index.html" class="nav-link">My Expenses</a></li>
@@ -16,8 +28,12 @@
 
   </ul>
 </nav>
+    </header>
+ 
+   
   <div class="analytics-container">
     
+     
     <div class="analytics-title">Analytics</div>
     <div class="analytics-desc">category-wise expense breakdown</div>
     <canvas id="categoryPieChart" width="260" height="260"></canvas>
